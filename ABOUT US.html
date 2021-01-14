@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script>
+function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
+<title>HOMEPAGE</title>
+<link href="FOR%20HOMEPAGE.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.auto-style1 {
+	background-color: #000000;
+}
+.auto-style6 {
+	text-align: center;
+	text-decoration: none;
+}
+.auto-style7 {
+	color: #000000;
+}
+.auto-style8 {
+	text-decoration: none;
+}
+.auto-style9 {
+	text-align: center;
+}
+.auto-style10 {
+	border-width: 0px;
+}
+.auto-style11 {
+	font-family: Stencil;
+	text-align: center;
+}
+.auto-style12 {
+	text-decoration: underline;
+}
+.auto-style13 {
+	font-weight: bold;
+	text-align: center;
+	font-size: large;
+	font-family: Stencil;
+}
+.auto-style17 {
+	font-family: "Comic Sans MS";
+	font-weight: bold;
+	font-size: x-large;
+	color: #FFFFFF;
+	background-color: #FF0000;
+}
+</style>
+</head>
+<body onload="checkCookie()">
+<table style="width: 100%">
+	<tr>
+		<td><img alt="LOGO" height="125" src="logo1.0.png" width="400" style="border:thin red double"></td>
+		<td style="width: 150px; height: 100px">
+		<h1><a class="auto-style8" href="index.html">
+		<span class="auto-style7">home</span></a></h1>
+		</td>
+			<td style="width: 150px; height: 100px">
+		<h1>modules</h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1>
+		<a href="TECH%20REQUIREMENTS.html" target="_blank" class="auto-style8">
+		<span class="auto-style7">tech need</span></a></h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1><a href="REGISTER.html" target="_blank" class="auto-style8">
+		<span class="auto-style7">register</span></a></h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1><a href="LOGIN%20PAGE.html" target="_blank" class="auto-style6">
+		<span class="auto-style7">LESSONS</span></a></h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1><a href="LOGIN%20PAGE.html" target="_blank" class="auto-style6">
+		<span class="auto-style7">login</span></a></h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1><a class="auto-style8" href="FEEDBACK.html">
+		<span class="auto-style7">feedback</span></a></h1>
+		</td>
+	</tr>
+</table>
+<hr class="auto-style1">
+<div style="background-color:#74BBFB">
+	<table style="width: 100%">
+		<tr>
+			<td style="width:50%">
+		    <p class="auto-style13">“For me, the best part about coding is my career progression. I 
+			moved from Indore to Mumbai after that I discovered this platform. 
+			Overnight, my salary doubled. Plus, this work doesn’t feel like 
+			work. I love teaching such bright people. With this on my resume, I 
+			feel qualified for every primary school teaching job.” -By a Teacher</p>
+			</td>
+			<td class="auto-style9" style="width:50%">
+			<a href="contact%20us.html">
+			<img alt="About us" height="35%" src="Top-10-Ranking-About-Us-Pages.png" width="80%" class="auto-style10"></a></td>
+		</tr>
+	</table>
+</div>
+
+<table style="width: 100%">
+	<tr>
+		<td style="width:50%"><p class="auto-style13">This platform was created to solve the #1 gap in our school system today.
+Less than 5% of schools taught mathematics during the Industrial Revolution. Widespread unemployment followed until schools added Mathematics to the curriculum.
+Today, in the computer age, less than 1% of schools teach algorithmic thinking despite research indicating early years as the turning point for deep coding skills. 
+Result, a major gap in the requirements of the new world and our skills.
+</p></td>
+		<td class="auto-style9"><img alt="Kid" height="35%" src="teacherkid.jpg" width="80%"></td>
+	</tr>
+</table>
+<div style="background-color:#74BBFB">
+
+	<table style="width: 100%">
+		<tr>
+			<td style="width:50%"><h3 class="auto-style11"><strong>
+			<span class="auto-style12">About Us</span><br class="auto-style12">
+Do you want your kid to create the world’s next big tech platform? our mission is to empower a whole generation to become creators versus consumers of technology.
+We teach fundamentals of coding--logic, structure, sequence and algorithminc thinking to enable people to generate creative outcomes eg websites, animations and apps. 
+All classes are taught 1:1 Live Online by Top 0.1% of early coding experts.</strong></h3><br>
+			<p class="auto-style11">
+			<a class="auto-style8" href="mailto:shubham24587@gmail.com?subject=Enquery">
+			<span class="auto-style7">shubham24587@gmail.com</span></a></p></td>
+			<td class="auto-style9"><p class="auto-style13">Join the revolution Now</p>
+			<form action="REGISTER.html">
+			<br><input style="width:160px ;height:80px"class="auto-style17" type="submit" value="APPLY"><br>
+			</form>
+			<br><p class="auto-style13">LIMITED SPOTS LEFT!!</p>
+			<p class="auto-style13">
+			<a class="auto-style8" href="contact%20us.html">
+			<span class="auto-style7">CONTACT US</span></a></p><br></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

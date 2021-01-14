@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script>
+function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
+<title>HOMEPAGE</title>
+<link href="FOR%20HOMEPAGE.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.auto-style1 {
+	background-color: #000000;
+}
+.auto-style6 {
+	text-align: center;
+	text-decoration: none;
+}
+.auto-style7 {
+	color: #000000;
+}
+.auto-style8 {
+	text-decoration: none;
+}
+.auto-style17 {
+	font-family: "Comic Sans MS";
+	font-weight: bold;
+	font-size: x-large;
+	color: #FFFFFF;
+	background-color: #FF0000;
+}
+.auto-style18 {
+	text-align: right;
+}
+.auto-style19 {
+	text-align: left;
+	font-family: "Comic Sans MS";
+}
+</style>
+</head>
+<body onload="checkCookie()">
+<table style="width: 100%">
+	<tr>
+		<td><img alt="LOGO" height="125" src="logo1.0.png" width="400" style="border:thin red double"></td>
+		<td style="width: 150px; height: 100px">
+		<h1><a class="auto-style8" href="HOMEPAGE.html">
+		<span class="auto-style7">home</span></a></h1>
+		</td>
+			<td style="width: 150px; height: 100px">
+		<h1>modules</h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1>
+		<a href="TECH%20REQUIREMENTS.html" target="_blank" class="auto-style8">
+		<span class="auto-style7">tech need</span></a></h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1><a href="REGISTER.html" target="_blank" class="auto-style8">
+		<span class="auto-style7">register</span></a></h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1><a href="LOGIN%20PAGE.html" target="_blank" class="auto-style6">
+		<span class="auto-style7">LESSONS</span></a></h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1><a href="LOGIN%20PAGE.html" target="_blank" class="auto-style6">
+		<span class="auto-style7">login</span></a></h1>
+		</td>
+		<td style="width: 150px; height: 100px">
+		<h1><a class="auto-style8" href="FEEDBACK.html">
+		<span class="auto-style7">feedback</span></a></h1>
+		</td>
+	</tr>
+</table>
+<hr class="auto-style1">
+<h1>BENEFITS OF CODING !!!</h1>
+
+<table style="width: 100%">
+	<tr>
+		<td><button onclick="myFunction()" class="auto-style17">Say Hello</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Please enter your name:", "");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
+    txt = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script></td>
+		<td class="auto-style18"><button onclick="alert('Hello\nHow is it going\n Feel free to drop in a feedback?')" class="auto-style17">
+Touch Me</button></td>
+	</tr>
+</table>
+		
+<table style="width: 100%">
+	<tr>
+		<td style="background-color:#74BBFB"><h4 class="auto-style19">Helps develop problem-solving skills. 
+Coding is an excellent way to help your child think more logically.
+ Called computational thinking, kids learn all of the steps they need to be able to solve problems and create new solutions. 
+ As we mentioned above, coding classes for kids involves taking complicated problems and distilling them down to smaller, more manageable parts. 
+ That’s the way software engineers do it. But this method also translates to professions such as auto repair and laboratory science, among others.
+  Your child will even be able to take this same methodology and apply it to more creative endeavors such as writing and visual arts. 
+  Coding helps build critical problem-solving skills so your child can more easily tackle school subjects like geometry, statistics, and physics.
+   It’s also a great way to solve common, everyday problems such as managing large projects or breaking down chores or to-do lists. 
+‍</h4></td>
+	</tr>
+	<tr>
+		<td><h4 class="auto-style19">Opens up more job opportunities in the future.
+According to Code.org, 71% of all new STEM jobs are in computing. On the flip side, only 8% of STEM graduates have a computer science degree. 
+That means there are plenty of jobs for the taking for those who have coding experience. And if you enroll your child in coding class at a young 
+age and they stick with it, think of how much experience they’ll have by the time they’re an adult and applying for jobs. 
+These can be lucrative jobs, so who knows...you may even get that beach house they promised you sooner than you thought. </h4></td>
+	</tr>
+	<tr>
+		<td style="background-color:#74BBFB"><h4 class="auto-style19">Makes math fun. We're serious.
+
+This is a hard one to believe…, right? However, if your child dislikes math, coding is a great way to help make it more fun. Why is that, you ask? Well, 
+they may not even realize they’re doing it. While they’re using logical thinking to solve problems, your child is also putting math into action in a practical,
+ hands-on way. It’s like a game; they can’t move forward in the coding project until they solve the math expressions involved in the code. Gameifying math with code.
+  As parents, we’re still figuring out how to make math fun...so we may even sign up for coding classes, too...
+‍</h4></td>
+	</tr>
+	<tr>
+		<td><h4 class="auto-style19">Expands creativity.
+
+We’ve talked a lot about logical thinking and problem solving but coding also involves creativity and inspiration.
+ There’s a lot of room for experimentation and creation. Coding is a language, and like other languages, it’s a great form of self-expression.
+  Kids are naturally curious and full of outside-of-the-box ideas. By enrolling your child in coding classes,
+   they can literally take nothing and create anything their imagination allows, from apps to video games to websites. 
+   There’s also a connection between coding and storytelling since they both follow a similar pattern of beginning, middle, and end.
+    Coding is just as much about problem-solving as it is about creativity!
+‍</h4></td>
+	</tr>
+</table>
+		
+</body>
+</html>

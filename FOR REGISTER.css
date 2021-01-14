@@ -1,0 +1,18 @@
+﻿h1,h2{
+	text-transform:capitalize;
+	text-align:center;
+	text-decoration:none;
+	color:black;
+	font-family:Stencil;
+	font-style:normal;
+	font-size:x-large;
+	}
+h1{
+	border-left:6px red solid;
+    height:35px;
+    }
+h2 {
+	border-left:6px black solid;
+	height:40px;
+	
+}    
